@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="/Team4_Angular/css/profile.css">
+</head>
+
+<body style="background-image: url(/Team4_Angular/media/Change-Profile-Background.png) ;">
+   
+    <div class="wrapper">
+        <div class="top-icons">
+            <i class="fas fa-long-arrow-alt-left"></i>
+            <i class="fas fa-ellipsis-v"></i>
+            <i class="far fa-heart"></i>
+        </div>
+
+        <div class="profile">
+
+            <div class="profile-pic">
+                <label class="-label" for="file">
+                    <span class="glyphicon glyphicon-camera"></span>
+                    <span>Change Image</span>
+                </label>
+                <input id="file" type="file" onchange="loadFile(event)" />
+                <img src="/Team4_Angular/media/Add-Profile-Pic.png" id="output"
+                    width="200" />
+            </div><br><br>
+            <h3 class="name">Edit Picture</h3><br><br>
+        </div>
+
+    </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="/Team4_Angular/js/profilePic.js">
+        // //to change profile pic
+        // var loadFile = function (event) {
+        //     var image = document.getElementById("output");
+        //     image.src = URL.createObjectURL(event.target.files[0]);
+        // };
+
+        // //to change password
+        // $(document).ready(function () {
+        //     $(".btn").click(function () {
+        //         id = $("#tId").val();
+
+        //         let record = {
+
+        //             title: $("#ttitle").val(),
+        //             author: $("#tauthor").val()
+        //         }
+        //         $.ajax({
+        //             type: 'PUT',
+        //             dataType: 'json',
+        //             url: 'http://localhost:3000/input/' + id,
+        //             data: record,
+        //             success: function (data) {
+        //                 console.log(data)
+        //             }
+        //         })
+        //     });
+        // });
+    </script>
+
+</body>
+
+</html>

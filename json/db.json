@@ -1,0 +1,84 @@
+{
+  "user": [
+    {
+      "id": 1,
+      "first_name": "Dhanshree",
+      "last_name": "Hood",
+      "email": "dh@gmail.com",
+      "password": "098@098",
+      "mobile": "9730569605"
+    },
+    {
+      "first_name": "Roma",
+      "last_name": "Patil",
+      "email": "roma@gmail.com",
+      "password": "roma@123",
+      "mobile": "1234567890",
+      "id": 2
+    },
+    {
+      "first_name": "harsh",
+      "last_name": "shahu",
+      "email": "harsh@gmail.com",
+      "password": "harsh@123",
+      "mobile": "99999999",
+      "id": 3
+    },
+    {
+      "first_name": "rey",
+      "last_name": "khurrana",
+      "email": "rey@gmail.com",
+      "password": "rey@123",
+      "mobile": "5555555555",
+      "id": 4
+    },
+    {
+      "first_name": "kishor",
+      "last_name": "kumar",
+      "email": "kishor@gmail.com",
+      "password": "k@123",
+      "mobile": "66666666666",
+      "id": 5
+    },
+    {
+      "first_name": "Drushti",
+      "last_name": "Bothikar",
+      "email": "db@gmail.com",
+      "password": "db@123",
+      "mobile": "2222222222",
+      "id": 6
+    },
+    {
+      "first_name": "pinky",
+      "last_name": "sharma",
+      "email": "p@gmail.com",
+      "password": "p@123",
+      "mobile": "1111111111",
+      "id": 7
+    },
+    {
+      "first_name": "Ashwin",
+      "last_name": "Padole",
+      "email": "ashwin@gmail.com",
+      "password": "123@123",
+      "mobile": "5555555555",
+      "id": 8
+    },
+    {
+      "first_name": "meera",
+      "last_name": "thakur",
+      "email": "m@123",
+      "password": "m@123",
+      "mobile": "7777777777",
+      "id": 9
+    },
+    {
+      "first_name": "nisha",
+      "last_name": "kejri",
+      "email": "nisha@gmail.com",
+      "password": "n@123",
+      "mobile": "1212121212",
+      "id": 10
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+.body {
+    background: url(/Team4_Angular/media/Home-Background.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.Select_Language{
+    /* background-color: rgb(255, 255, 255); */
+    height: 6rem;
+    padding-top: 2rem;
+}
+
+.latest_book {
+    background-color: white;
+    height: 6rem;
+    padding-top: 2rem;
+}
+
+.top_rated_books {
+    background-color: white;
+    height: 6rem;
+    padding-top: 2rem;
+}
+
+#cimg {
+    height: 80%;
+    width: 100%;
+}
+
+/* footer */
+footer {
+    height: auto;
+    text-align: center;
+    padding: 3px;
+}
+
+/* media query */
+@media screen and (min-width: 600px) {
+    #book_logo {
+        height: auto;
+        width: 10%;
+    }
+}

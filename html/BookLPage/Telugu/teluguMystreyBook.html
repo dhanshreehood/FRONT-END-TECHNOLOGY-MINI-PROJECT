@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Telugu Mystery</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
+
+    <style>
+        .body {
+            background: url(/Team4_Angular/media/Background.jpg) no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+
+        }
+
+        #login_link {
+            padding-left: 1000px;
+        }
+
+        .Book_Library {
+            background-color: gainsboro;
+            height: 6rem;
+            padding-top: 2rem;
+        }
+
+        /* middle section */
+
+        #main_container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2%;
+            grid-auto-rows: minmax(0%, auto);
+            height: 20%;
+        }
+
+        #div1 {
+            height: 35rem;
+            background-color: gainsboro;
+            grid-column: 1;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        #div2 {
+            height: 35rem;
+            grid-column: 2;
+            background-color: gainsboro;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        #div3 {
+            height: 35rem;
+            grid-column: 3;
+            background-color: gainsboro;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        /* footer */
+        footer {
+            height: auto;
+            text-align: center;
+            padding: 3px;
+        }
+
+        /* star */
+        body {
+            background: #222225;
+            color: white;
+        }
+
+        .rating {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: center;
+        }
+
+        .rating>input {
+            display: none;
+        }
+
+        .rating>label {
+            position: relative;
+            color: #FFD700;
+            cursor: pointer;
+        }
+
+        .rating>label::before {
+            content: "\2605";
+            position: absolute;
+            opacity: 0;
+        }
+
+        .rating>label:hover:before,
+        .rating>label:hover~label:before {
+            opacity: 1 !important;
+        }
+
+        .rating>input:checked~label:before {
+            opacity: 1;
+        }
+
+        .rating:hover>input:checked~label:before {
+            opacity: 0.4;
+        }
+
+        /* media query */
+        @media screen and (min-width: 600px) {
+            #book_logo {
+                height: auto;
+                width: 10%;
+            }
+        }
+    </style>
+</head>
+
+<body class="body">
+    <!-- Navigation bar -->
+    <nav>
+        <div class="bg-info">
+            <img src="\Team4_Angular\media\Book-Logo.png" class="rounded float-start pt-3 p-2" alt="book-logo"
+                id="book_logo">
+            <h1 class="position-relative pt-5">Online Book Store</h1>
+            <ul class="nav justify-content-end">
+                <li class="nav-item"><a class="nav-link"
+                        href="\Team4_Angular\html\afterHomePage.html"><button>Home</button></a></li>
+                <!-- search bar -->
+                <li class="nav-item">
+                    <form class="d-flex" role="search">
+                        <!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"> -->
+                        <!-- search bar working -->
+                        <input type="text" class="form-control me-2" id="myInput" onkeyup="myFunction()"
+                            placeholder="Search for category.." title="Type in a name">
+                        <button class="btn btn-outline-light" type="submit" style="background-color: white;">
+                            <ul id="myUL" style="display: none;">
+                                <li><a href="/Team4_Angular/html/selectLanguage.html">select language</a></li>
+                                <li><a href="/Team4_Angular/html/hindiBookCategory.html">hindi</a></li>
+                                <li><a href="/Team4_Angular/html/kannadaBookCategory.html">Kannada</a></li>
+                                <li><a href="/Team4_Angular/html/marathiBookCategory.html">marathi</a></li>
+                                <li><a href="/Team4_Angular/html/tamilBookCategory.html">tamil</a></li>
+                                <li><a href="/Team4_Angular/html/teluguBookCategory.html">telugu</a></li>
+                                <li><a href="/Team4_Angular/html/englishBookCategory.html">english</a></li>
+                            </ul>
+                        </button>
+                    </form>
+                </li>
+                <li>
+                    <div class="dropdown">
+                        <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <img src="\Team4_Angular\media\User-Profile-Icon.png" alt="Profilr pic" height="30px"
+                                width="30px">
+                        </a>
+
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="/Team4_Angular/html/profilePic.html">Change Profile
+                                    Picture</a></li>
+                            <li><a class="dropdown-item" href="/Team4_Angular/html/updatePswrd.html">Update Password</a>
+                            </li>
+                            <li class="nav-item"><a class="nav-link dropdown-item" href="/Team4_Angular/html/login.html"
+                                    onclick="logOut()">LogOut</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav><br>
+
+    <!-- middle section -->
+    <!-- Book Library -->
+    <h3 style="text-align: center" class="Book_Library">Telugu Mystery Books</h3><br>
+    <div id="main_container">
+
+        <div id="div1">
+            <a href="/Team4_Angular/Data/telugu1.pdf" target="_blank">
+                <img src="/Team4_Angular/media/book-1.png" alt="book-1" height="88%" class="text-center">
+            </a>
+            <button class="w-100"
+                style="background-color: rgb(0, 0, 0); border-color:rgb(0, 0, 0) ; border-radius: 10px;"
+                src="/Team4_Angular/html/englishBookCategory.html">
+                <div class="rating">
+                    <input type="radio" name="rating" value="5" id="5"><label for="5">☆</label>
+                    <input type="radio" name="rating" value="4" id="4"><label for="4">☆</label>
+                    <input type="radio" name="rating" value="3" id="3"><label for="3">☆</label>
+                    <input type="radio" name="rating" value="2" id="2"><label for="2">☆</label>
+                    <input type="radio" name="rating" value="1" id="1"><label for="1">☆</label>
+                </div>
+            </button><br>
+            <a href="/Team4_Angular/html/comment.html">
+                <button class="w-100"
+                    style="background-color: rgb(255, 181, 243); border-color: rgb(255, 181, 243); border-radius: 10px;">
+                    Add Comments</button>
+            </a>
+        </div>
+
+        <div id="div2">
+            <a href="/Team4_Angular/Data/Telugu2.pdf" target="_blank">
+                <img src="/Team4_Angular/media/book-2.png" alt="book-1" height="88%" class="text-center">
+            </a>
+            <button class="w-100"
+                style="background-color: rgb(0, 0, 0); border-color:rgb(0, 0, 0) ; border-radius: 10px;"
+                src="/Team4_Angular/html/englishBookCategory.html">
+                <div class="rating">
+                    <input type="radio" name="rating" value="5" id="5"><label for="5">☆</label>
+                    <input type="radio" name="rating" value="4" id="4"><label for="4">☆</label>
+                    <input type="radio" name="rating" value="3" id="3"><label for="3">☆</label>
+                    <input type="radio" name="rating" value="2" id="2"><label for="2">☆</label>
+                    <input type="radio" name="rating" value="1" id="1"><label for="1">☆</label>
+                </div>
+            </button><br>
+            <a href="/Team4_Angular/html/comment.html">
+                <button class="w-100"
+                    style="background-color: rgb(255, 181, 243); border-color: rgb(255, 181, 243); border-radius: 10px;">
+                    Add Comments</button>
+            </a>
+        </div>
+
+        <div id="div3">
+            <a href="/Team4_Angular/Data/telugu1.pdf" target="_blank">
+                <img src="/Team4_Angular/media/book-3.png" alt="book-1" height="88%" class="text-center">
+            </a>
+            <button class="w-100"
+                style="background-color: rgb(0, 0, 0); border-color:rgb(0, 0, 0) ; border-radius: 10px;"
+                src="/Team4_Angular/html/englishBookCategory.html">
+                <div class="rating">
+                    <input type="radio" name="rating" value="5" id="5"><label for="5">☆</label>
+                    <input type="radio" name="rating" value="4" id="4"><label for="4">☆</label>
+                    <input type="radio" name="rating" value="3" id="3"><label for="3">☆</label>
+                    <input type="radio" name="rating" value="2" id="2"><label for="2">☆</label>
+                    <input type="radio" name="rating" value="1" id="1"><label for="1">☆</label>
+                </div>
+            </button><br>
+            <a href="/Team4_Angular/html/comment.html">
+                <button class="w-100"
+                    style="background-color: rgb(255, 181, 243); border-color: rgb(255, 181, 243); border-radius: 10px;">
+                    Add Comments</button>
+            </a>
+        </div>
+    </div><br><br>
+
+    <!-- footer -->
+    <footer class="bg-info">
+        <br><br>
+        <h5>Legal | Privacy © 2022 | All Rights Reserved.</h5><br><br>
+    </footer>
+
+    <script src="/Team4_Angular/js/searchBar.js"></script>
+
+</body>
+
+</html>

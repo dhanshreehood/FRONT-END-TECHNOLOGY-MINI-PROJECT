@@ -1,0 +1,76 @@
+.body{
+    background:url(/Team4_Angular/media/Background.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;    
+}
+
+#login_link {
+    padding-left: 1000px;
+}
+
+#Head_Line{
+    background-color: gainsboro;
+    height: 6rem;
+    padding-top: 2rem;
+}
+
+/* middle section */
+#main_container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    grid-auto-rows: minmax(120px, auto);
+    padding: 2%;
+}
+
+#B_C1 {
+    height: 25rem;
+    background-image: url(/Team4_Angular/media/Category-Advanture.png);
+    text-align: center;
+    grid-column: 1;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#B_C2 {
+    height: 25rem;
+    text-align: center;
+    grid-column: 2;
+    background-image: url(/Team4_Angular/media/Category-Comic.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#B_C3 {
+    height: 25rem;
+    text-align: center;
+    grid-column: 3;
+    background-image: url(/Team4_Angular/media/Category-Mystrey.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#B_C4 {
+    height: 25rem;
+    text-align: center;
+    grid-column: 3;
+    background-image: url(/Team4_Angular/media/Category-Historical.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* footer */
+footer {
+    height: auto;
+    text-align: center;
+    padding: 3px;
+}
+
+/* media query */
+@media screen and (min-width: 600px) {
+    #book_logo {
+        height: auto;
+        width: 10%;
+    }
+}
